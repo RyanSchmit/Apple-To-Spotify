@@ -8,11 +8,11 @@ token = SpotifyOAuth(scope=scope,username=username)
 spotifyObject = spotipy.Spotify(auth_manager = token)
  
 #insert arrray of songs here  
-old = []
+countryPlaylist = []
 list_of_songs = []
 
 #looks for each song in the array
-for x in old:
+for x in countryPlaylist:
     result = spotifyObject.search(q=x)
     print(x)
     list_of_songs.append(result['tracks']['items'][0]['uri'])
